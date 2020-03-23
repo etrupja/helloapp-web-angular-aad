@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+  
+  <div class="row" id="divAction">
+      <div class="col-12">
+          <button type="button" class="btn btn-primary" (click)="showMessage()">Show Message</button>
+      </div>
+  </div>
+  <hr />
+  <div *ngIf="showResponse" class="row" style="margin-top:10px">
+      <div class="col-12">
+          <div class="text-success" *ngIf="responseOk" id="message-success">{{responseTxt}}</div>
+          <div class="text-danger"  *ngIf="!responseOk" id="message-error">{{responseTxt}}</div>
+      </div>
+  </div>
+</div>
